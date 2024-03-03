@@ -4,294 +4,241 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ong Chang Le - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <style>
-      /* Reset default margin and padding */
-      body,
-      h1,
-      h2,
-      h3,
-      p {
-        margin: 0;
-        padding: 0;
-      }
-
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
       body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-      }
-
-      header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1rem 0;
-        animation: fadeIn 2s;
-      }
-
-      nav {
-        display: flex;
-        justify-content: center;
-        padding: 1rem 0;
-        animation: fadeIn 2s;
-      }
-
-      nav a {
-        color: #333;
-        text-decoration: none;
-        margin: 0 1rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
-      }
-
-      nav a:hover {
-        color: #555;
-      }
-
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 1rem;
-        animation: fadeIn 2s;
-      }
-
-      .about-me {
-        padding: 2rem 0;
-        animation: fadeIn 2s;
-      }
-
-      .projects-container {
-        overflow-x: auto; /* Enable horizontal scrolling */
-        padding: 2rem 0;
-        animation: fadeIn 2s;
-      }
-
-      .projects {
-        display: flex; /* Use flexbox to enable horizontal arrangement */
-        gap: 2.5rem; /* Increased spacing between project items */
-        overflow-x: auto;
-        padding: 2rem 0;
-        animation: fadeIn 2s;
-      }
-
-      .project {
-        flex: 0 0 300px; /* Constant width for project items */
-        border: 1px solid #ccc;
-        padding: 1rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        animation: fadeIn 2s;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      .project:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .project img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-      }
-
-      .project h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .project p {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .project a {
-        display: inline-block;
-        background-color: #333;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: background-color 0.3s ease-in-out;
-      }
-
-      .project a:hover {
-        background-color: #555;
-      }
-
-      .contact {
-        padding: 2rem 0;
-        animation: fadeIn 2s;
-      }
-
-      .contact ul {
-        list-style: none;
-        margin-left: 0;
-        padding-left: 0;
-      }
-
-      .contact li {
-        margin-bottom: 0.5rem;
-      }
-
-      .contact li a {
-        color: #333;
-        text-decoration: none;
-        transition: color 0.3s ease-in-out;
-      }
-
-      .contact li a:hover {
-        color: #555;
-      }
-
-      footer {
-        text-align: center;
-        background-color: #333;
-        color: #fff;
-        padding: 1rem 0;
-        animation: fadeIn 2s;
-      }
-
-      @keyframes fadeIn {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
+        font-family: "Roboto", sans-serif;
       }
     </style>
   </head>
-  <body>
-    <header>
-      <h1>Ong Chang Le</h1>
-      <p>Computer Science Student</p>
-    </header>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Navbar -->
+    <nav
+      class="flex flex-col sm:flex-row justify-center items-center sm:justify-between py-4 px-6 bg-white shadow-md"
+    >
+      <div class="mb-4 sm:mb-0 text-center md:pl-6">
+        <a href="#" class="text-lg font-semibold">Ong Chang Le - Portfolio</a>
+      </div>
 
-    <nav>
-      <a href="#about-me">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <div class="space-x-6 lg:space-x-8 2xl:space-x-12">
+        <a href="#about" class="text-gray-600 hover:text-gray-900">About Me</a>
+        <a href="#projects" class="text-gray-600 hover:text-gray-900"
+          >Projects</a
+        >
+        <a
+          href="#contact"
+          class="text-gray-600 hover:text-gray-900 md:pr-8 lg:pr-12 2xl:pr-16"
+          >Contact</a
+        >
+      </div>
     </nav>
 
-    <div class="container">
-      <section id="about-me" class="about-me">
-        <h2>About Me</h2>
-        <p>
-          I am Ong Chang Le, a 20-year-old computer science student studying at
-          Monash University Malaysia. I enjoy playing basketball and Chinese
-          chess, and I'm passionate about developing fun applications and
-          exploring exciting projects to work on.
-        </p>
-      </section>
-
-      <section id="projects" class="projects-container">
-        <h2>Projects</h2>
-        <div class="projects">
-          <div class="project">
-            <img
-              src="https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg"
-              alt="Project 1"
-            />
-            <h3>Instagram Bot</h3>
-            <p>
-              Instagram bot script using Python to automate likes, follows and
-              comments
-            </p>
-            <a
-              href="https://github.com/ongcl03/Python-Project/tree/main/InstaPy"
-              >Live Demo / GitHub Repo</a
-            >
-          </div>
-          <div class="project">
-            <img
-              src="https://images.pexels.com/photos/4195335/pexels-photo-4195335.jpeg"
-              alt="Project 2"
-            />
-            <h3>Online Music Streaming App</h3>
-            <p>Simple online music streaming app built using Flutter</p>
-            <a
-              href="https://github.com/ongcl03/flutter_projects/tree/reverb_music_stream_app"
-              >Live Demo / GitHub Repo</a
-            >
-          </div>
-          <div class="project">
-            <img
-              src="https://firebasestorage.googleapis.com/v0/b/firestorestorage-f0d1a.appspot.com/o/pexels-photo-685627874.jpg?alt=media"
-              alt="Project 3"
-            />
-            <h3>Google Form Auto Filler</h3>
-            <p>A Python script that automates filling out Google forms</p>
-            <a
-              href="https://github.com/ongcl03/Python-Project/tree/main/Google%20Form%20Auto%20Filler/Requests%20method"
-              >Live Demo / GitHub Repo</a
-            >
-          </div>
-          <div class="project">
-            <img
-              src="https://static.vecteezy.com/system/resources/previews/006/835/158/original/is-a-simple-robot-logo-that-is-unique-and-simple-free-vector.jpg"
-              alt="Project 4"
-            />
-            <h3>ChatGPT Projects</h3>
-            <p>
-              Simple ChatGPT projects that use the open-ai key to get chat
-              responses
-            </p>
-            <a href="https://github.com/ongcl03/myChatGPT"
-              >Live Demo / GitHub Repo</a
-            >
-          </div>
-          <div class="project">
-            <img
-              src="https://images.pexels.com/photos/3123915/pexels-photo-3123915.jpeg"
-              alt="Project 4"
-            />
-            <h3>Birth Counter Malaysian</h3>
-            <p>
-              A website that counts the number of babies born on a specific day
-              in Malaysia
-            </p>
-            <a href="https://github.com/ongcl03/Date-Birth-Malaysia"
-              >Live Demo / GitHub Repo</a
-            >
-          </div>
-          <!-- Add more projects as needed -->
+    <!-- About Me -->
+    <!-- About Me -->
+    <section id="about" class="text-center pb-20 pt-[60px]">
+      <div
+        class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-md rounded-xl transform transition-all duration-300 hover:scale-105"
+      >
+        <div class="bg-gray-100 dark:bg-gray-800 rounded-t-xl text-left">
+          <h2
+            class="text-3xl font-bold text-gray-800 dark:text-gray-200 p-4 text-center"
+          >
+            About Me
+          </h2>
         </div>
-      </section>
+        <div class="flex flex-col items-center p-4">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/firestorestorage-f0d1a.appspot.com/o/linkedin_cl.jpg?alt=media&token=b5872051-9924-4a7a-93e2-1d6dcd1652dd"
+            alt="Ong Chang Le"
+            class="w-32 h-32 rounded-full border-4 border-gray-300 mb-4"
+          />
+          <ul class="list-none space-y-2 text-left">
+            <li class="flex items-center text-gray-700 dark:text-gray-300">
+              <i class="fas fa-user fa-fw mr-2"></i>Name: Ong Chang Le
+            </li>
+            <li class="flex items-center text-gray-700 dark:text-gray-300">
+              <i class="fas fa-birthday-cake fa-fw mr-2"></i>Age: 20 years old
+            </li>
+            <li class="flex items-center text-gray-700 dark:text-gray-300">
+              <i class="fas fa-laptop-code fa-fw mr-2"></i>Occupation: Computer
+              science student
+            </li>
+            <li class="flex items-center text-gray-700 dark:text-gray-300">
+              <i class="fas fa-school fa-fw mr-2"></i>Institution: Monash
+              University Malaysia
+            </li>
+            <li class="flex items-center text-gray-700 dark:text-gray-300">
+              <i class="fas fa-basketball-ball fa-fw mr-2"></i>Hobbies: Playing
+              basketball and Chinese chess
+            </li>
+            <li class="flex items-center text-gray-700 dark:text-gray-300">
+              <i class="fas fa-heart fa-fw mr-2"></i>Passion: Developing fun
+              applications and exploring exciting projects to work on
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Feel free to get in touch with me through the following channels:</p>
-        <ul>
-          <li>
-            <a href="mailto:your_email@example.com">ongchangle03@gmail.com</a>
-          </li>
-          <!-- Add more contact information as needed -->
-        </ul>
-      </section>
-      <iframe
-        id="chatbotIframe"
-        src="https://www.chatbase.co/chatbot-iframe/sahKfTGMY4FMaKGnsP_8B"
-        width="100%"
-        style="height: 100%; min-height: 700px; display: none"
-        frameborder="0"
-      ></iframe>
-    </div>
+    <!-- Projects -->
+    <section id="projects" class="py-12 bg-gray-100">
+      <div
+        class="container mx-auto px-[50px] md:px-[30px] lg:px-[20px] xl:px-[65px] 2xl:[80px]"
+      >
+        <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+        <div
+          id="projectsGrid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Project cards will be dynamically added here -->
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <!-- Contact -->
+    <section id="contact" class="text-center py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-4">Contact</h2>
+        <p class="mb-8">Let's connect and talk about exciting projects!</p>
+        <div class="space-x-4 mb-8">
+          <!-- Email Icon -->
+          <a
+            href="mailto:ongchangle03@gmail.com"
+            class="inline-block bg-gray-200 rounded-full p-3 hover:bg-gray-300 transition-colors"
+          >
+            <i class="fas fa-envelope"></i>
+          </a>
+          <!-- LinkedIn Icon -->
+          <a
+            href="https://www.linkedin.com/in/ong-chang-le-b85249136/"
+            class="inline-block bg-gray-200 rounded-full p-3 hover:bg-gray-300 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <!-- GitHub Icon -->
+          <a
+            href="https://github.com/ongcl03"
+            class="inline-block bg-gray-200 rounded-full p-3 hover:bg-gray-300 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <p>ongchangle03@gmail.com</p>
+      </div>
+    </section>
 
-    <footer>&copy; 2023 Ong Chang Le | Portfolio</footer>
+    <script>
+      // Define project data
+      const projectsData = [
+        {
+          name: "Instagram Bot",
+          description:
+            "Instagram bot script using Python to automate likes, follows and comments.",
+          image:
+            "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg",
+          demoLink:
+            "https://github.dev/ongcl03/Python-Project/tree/main/InstaPy",
+          githubLink:
+            "https://github.com/ongcl03/Python-Project/tree/main/InstaPy",
+        },
+        {
+          name: "Ai Collection Site",
+          description:
+            "A website offering a collection of free AI resources, developed using React and Tailwind CSS.",
+          image:
+            "https://gigple.com/public/storage/blog/D4B271F0BBD5D5B31BFF.webp",
+          demoLink: "https://free-aitools.vercel.app/",
+          githubLink: "https://github.com/ongcl03/",
+        },
+        {
+          name: "Online Music Streaming App",
+          description: "Simple online music streaming app built using Flutter.",
+          image:
+            "https://images.pexels.com/photos/4195335/pexels-photo-4195335.jpeg",
+          demoLink:
+            "https://raw.githubusercontent.com/ongcl03/flutter_projects/reverb_music_stream_app/preview_image/home_page.png",
+          githubLink:
+            "https://github.com/ongcl03/flutter_projects/tree/reverb_music_stream_app",
+        },
+        {
+          name: "Google Form Auto Filler",
+          description:
+            "A Python script that automates filling out Google forms.",
+          image:
+            "https://firebasestorage.googleapis.com/v0/b/firestorestorage-f0d1a.appspot.com/o/pexels-photo-685627874.jpg?alt=media",
+          demoLink:
+            "https://github.dev/ongcl03/Python-Project/tree/main/Google%20Form%20Auto%20Filler/Requests%20method",
+          githubLink:
+            "https://github.com/ongcl03/Python-Project/tree/main/Google%20Form%20Auto%20Filler/Requests%20method",
+        },
+        {
+          name: "ChatGPT Projects",
+          description:
+            "Simple ChatGPT projects that use the open-ai key to get chat responses.",
+          image:
+            "https://static.vecteezy.com/system/resources/previews/006/835/158/original/is-a-simple-robot-logo-that-is-unique-and-simple-free-vector.jpg",
+          demoLink: "https://github.dev/ongcl03/myChatGPT",
+          githubLink: "https://github.com/ongcl03/myChatGPT",
+        },
+        {
+          name: "Birth Counter Malaysian",
+          description:
+            "A website that counts the number of babies born on a specific day in Malaysia.",
+          image:
+            "https://images.pexels.com/photos/3123915/pexels-photo-3123915.jpeg",
+          demoLink: "https://ongcl03.github.io/Date-Birth-Malaysia/",
+          githubLink: "https://github.com/ongcl03/Date-Birth-Malaysia",
+        },
+      ];
+
+      // Function to create project cards dynamically
+      function createProjectCards() {
+        const projectsGrid = document.getElementById("projectsGrid");
+        projectsData.forEach((project) => {
+          const projectCard = document.createElement("div");
+          projectCard.classList.add(
+            "border",
+            "bg-white",
+            "shadow-lg",
+            "rounded-xl",
+            "overflow-hidden",
+            "transform",
+            "transition",
+            "duration-300",
+            "hover:scale-105"
+          );
+
+          projectCard.innerHTML = `
+                    <img src="${project.image}" alt="${project.name}" class="w-full h-56 object-cover object-center">
+                    <div class="p-8">
+                        <h3 class="text-xl font-semibold">${project.name}</h3>
+                        <p class="text-gray-600 mt-2">${project.description}</p>
+                        <div class="mt-4">
+                            <a href="${project.demoLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white">Live Demo</a>
+                            <a href="${project.githubLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 ml-2">GitHub Repo</a>
+                        </div>
+                    </div>
+                `;
+          projectsGrid.appendChild(projectCard);
+        });
+      }
+
+      // Call the function to create project cards when the page loads
+      window.addEventListener("load", createProjectCards);
+    </script>
   </body>
-  <script>
-    window.embeddedChatbotConfig = {
-      chatbotId: "sahKfTGMY4FMaKGnsP_8B",
-      domain: "www.chatbase.co",
-    };
-  </script>
-  <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="sahKfTGMY4FMaKGnsP_8B"
-    domain="www.chatbase.co"
-    defer
-  ></script>
 </html>
