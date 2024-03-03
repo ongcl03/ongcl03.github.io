@@ -375,16 +375,17 @@
           );
 
           projectCard.innerHTML = `
-                      <img src="${project.image}" alt="${project.name}" class="w-full h-56 object-cover object-center">
-                      <div class="p-8">
-                          <h3 class="text-xl font-semibold text-[#111827]">${project.name}</h3>
-                          <p class="text-gray-600 mt-2">${project.description}</p>
-                          <div class="mt-4">
-                              <a href="${project.demoLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white demoLink">Live Demo</a>
-                              <a href="${project.githubLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 ml-2 githubLink">GitHub Repo</a>
-                          </div>
-                      </div>
-                  `;
+  <img src="${project.image}" alt="${project.name}" class="w-full h-56 object-cover object-center">
+  <div class="p-8">
+      <h3 class="text-xl font-semibold text-[#111827]">${project.name}</h3>
+      <p class="text-gray-600 mt-2">${project.description}</p>
+      <div class="mt-4 flex flex-col sm:flex-row">
+          <a href="${project.demoLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white w-full sm:w-auto demoLink">Live Demo</a>
+          <a href="${project.githubLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 mt-2 sm:mt-0 sm:ml-2 w-full sm:w-auto githubLink">GitHub Repo</a>
+      </div>
+  </div>
+`;
+
           projectsGrid.appendChild(projectCard);
         });
       }
