@@ -9,25 +9,153 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
       body {
         font-family: "Roboto", sans-serif;
+      }
+
+      /* Dark theme styles */
+      .dark {
+        background-color: #121212; /* Deep dark gray background */
+        color: #ffffff; /* White text */
+      }
+
+      .dark nav,
+      .dark .bg-white,
+      .dark .bg-gray-50,
+      .dark .bg-gray-100 {
+        background-color: #1a1a1a; /* Slightly lighter dark gray for layered elements */
+      }
+
+      .dark a,
+      .dark .text-gray-900 {
+        color: #ffffff; /* White link color */
+      }
+
+      .dark a:hover,
+      .dark .hover\:text-gray-900:hover {
+        color: #bbbbbb; /* Lighter link color on hover */
+      }
+
+      .dark .border,
+      .dark .shadow-md,
+      .dark .shadow-lg {
+        border-color: #222222; /* Dark gray border color */
+        box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1),
+          0 4px 6px -2px rgba(255, 255, 255, 0.05); /* Subtle white shadow for contrast */
+      }
+
+      .dark .aboutMe {
+        background-color: #1d1d1d;
+      }
+
+      .dark .contact {
+        background-color: #161616;
+      }
+
+      .dark .navbar {
+        background-color: #161616;
+        box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.5);
+      }
+
+      /* Update for specific elements if needed */
+      .dark .bg-gray-200,
+      .dark .hover\:bg-gray-300:hover,
+      .dark .rounded-full {
+        background-color: #2a2a2a; /* Dark gray for buttons and interactive elements */
+      }
+
+      .dark .text-gray-700,
+      .dark .dark\:text-gray-300 {
+        color: #ffffff; /* White text for dark mode */
+      }
+
+      /* Project card specific styles for dark mode */
+      .dark #projectsGrid .bg-white {
+        background-color: #1a1a1a; /* Dark gray background for cards */
+      }
+
+      .dark #projectsGrid .text-gray-700 {
+        color: #ffffff; /* White text for card content */
+      }
+
+      .contact-text {
+        color: #111827;
+      }
+
+      .dark .contact-text {
+        color: #ffffff;
+      }
+
+      .dark #projectsGrid .border-gray-300 {
+        border-color: #222222; /* Dark border for images */
+      }
+
+      .dark #projectsGrid .demoLink {
+        background-color: #103361; /* Dark gray background for buttons */
+        color: #ffffff; /* White text for buttons */
+      }
+
+      .dark #projectsGrid .demoLink:hover {
+        background-color: #4074b8; /* Slightly lighter gray for button hover state */
+      }
+
+      .dark #projectsGrid .githubLink {
+        background-color: #5e5d5d; /* Dark gray background for buttons */
+        color: #ffffff; /* White text for buttons */
+      }
+
+      .dark #projectsGrid .githubLink:hover {
+        background-color: #ababab; /* Slightly lighter gray for button hover state */
+      }
+
+      /* Update for 'About Me' section */
+      .dark .max-w-4xl {
+        background-color: #2a2a2a; /* Lighter gray for 'About Me' section in dark theme */
+      }
+
+      .dark .text-gray-800,
+      .dark .text-gray-700 {
+        color: #ffffff; /* White text in dark theme */
+      }
+
+      /* Light theme specific styles */
+      .bg-white {
+        color: #ffffff; /* White text for 'About Me' in light theme */
+      }
+
+      .dark #projects h2,
+      .dark #projectsGrid h3 {
+        color: #ffffff; /* White text for dark mode */
+      }
+
+      .dark #projectsGrid p {
+        color: #b1b1b1;
+      }
+
+      .dark .bg-gray-projects {
+        background-color: #2a2a2a; /* Dark gray background for projects section */
       }
     </style>
   </head>
   <body class="bg-gray-50 text-gray-900">
     <!-- Navbar -->
     <nav
-      class="flex flex-col sm:flex-row justify-center items-center sm:justify-between py-4 px-6 bg-white shadow-md"
+      class="flex flex-col sm:flex-row justify-center items-center sm:justify-between py-4 px-6 shadow-md navbar bg-white"
     >
       <div class="mb-4 sm:mb-0 text-center md:pl-6">
-        <a href="#" class="text-lg font-semibold">Ong Chang Le - Portfolio</a>
+        <a href="#" class="text-lg font-semibold text-[#111827]"
+          >Ong Chang Le - Portfolio</a
+        >
+        <!-- For Mobile -->
+        <a
+          href="#"
+          id="themeToggleMobile"
+          class="text-gray-600 hover:text-gray-900 sm:hidden pl-[10px]"
+        >
+          <i id="themeIconMobile" class="fas fa-moon"></i>
+        </a>
       </div>
 
       <div class="space-x-6 lg:space-x-8 2xl:space-x-12">
@@ -35,24 +163,25 @@
         <a href="#projects" class="text-gray-600 hover:text-gray-900"
           >Projects</a
         >
+        <a href="#contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+        <!-- For Desktop -->
         <a
-          href="#contact"
-          class="text-gray-600 hover:text-gray-900 md:pr-8 lg:pr-12 2xl:pr-16"
-          >Contact</a
+          href="#"
+          id="themeToggleDesktop"
+          class="text-gray-600 hover:text-gray-900 md:pr-8 lg:pr-12 2xl:pr-16 max-sm:hidden"
         >
+          <i id="themeIconDesktop" class="fas fa-moon"></i>
+        </a>
       </div>
     </nav>
 
     <!-- About Me -->
-    <!-- About Me -->
-    <section id="about" class="text-center pb-20 pt-[60px]">
+    <section id="about" class="text-center pb-20 pt-[60px] aboutMe">
       <div
-        class="max-w-4xl mx-auto my-8 p-6 bg-white shadow-md rounded-xl transform transition-all duration-300 hover:scale-105"
+        class="max-w-4xl mx-auto my-8 p-6 shadow-md rounded-xl transform transition-all duration-300 hover:scale-105 bg-white"
       >
         <div class="bg-gray-100 dark:bg-gray-800 rounded-t-xl text-left">
-          <h2
-            class="text-3xl font-bold text-gray-800 dark:text-gray-200 p-4 text-center"
-          >
+          <h2 class="text-3xl font-bold text-gray-800 p-4 text-center">
             About Me
           </h2>
         </div>
@@ -91,11 +220,13 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="py-12 bg-gray-100">
+    <section id="projects" class="py-12 bg-gray-100 bg-gray-projects">
       <div
         class="container mx-auto px-[50px] md:px-[30px] lg:px-[20px] xl:px-[65px] 2xl:[80px]"
       >
-        <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+        <h2 class="text-3xl font-bold text-center mb-12 dark:text-gray-200">
+          Projects
+        </h2>
         <div
           id="projectsGrid"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -105,11 +236,12 @@
       </div>
     </section>
     <!-- Contact -->
-    <!-- Contact -->
-    <section id="contact" class="text-center py-20">
+    <section id="contact" class="text-center py-20 contact">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold mb-4">Contact</h2>
-        <p class="mb-8">Let's connect and talk about exciting projects!</p>
+        <h2 class="text-4xl font-bold mb-4 contact-text">Contact</h2>
+        <p class="mb-8 contact-text">
+          Let's connect and talk about exciting projects!
+        </p>
         <div class="space-x-4 mb-8">
           <!-- Email Icon -->
           <a
@@ -137,16 +269,18 @@
             <i class="fab fa-github"></i>
           </a>
         </div>
-        <p>ongchangle03@gmail.com</p>
+        <p class="contact-text">ongchangle03@gmail.com</p>
       </div>
     </section>
+
     <iframe
       id="chatbotIframe"
       src="https://www.chatbase.co/chatbot-iframe/sahKfTGMY4FMaKGnsP_8B"
       width="100%"
       style="height: 100%; min-height: 700px; display: none"
       frameborder="0"
-    ></iframe>
+    >
+    </iframe>
     <script>
       window.embeddedChatbotConfig = {
         chatbotId: "sahKfTGMY4FMaKGnsP_8B",
@@ -159,7 +293,6 @@
       domain="www.chatbase.co"
       defer
     ></script>
-
     <script>
       // Define project data
       const projectsData = [
@@ -242,22 +375,53 @@
           );
 
           projectCard.innerHTML = `
-                    <img src="${project.image}" alt="${project.name}" class="w-full h-56 object-cover object-center">
-                    <div class="p-8">
-                        <h3 class="text-xl font-semibold">${project.name}</h3>
-                        <p class="text-gray-600 mt-2">${project.description}</p>
-                        <div class="mt-4">
-                            <a href="${project.demoLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white">Live Demo</a>
-                            <a href="${project.githubLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 ml-2">GitHub Repo</a>
-                        </div>
-                    </div>
-                `;
+                      <img src="${project.image}" alt="${project.name}" class="w-full h-56 object-cover object-center">
+                      <div class="p-8">
+                          <h3 class="text-xl font-semibold text-[#111827]">${project.name}</h3>
+                          <p class="text-gray-600 mt-2">${project.description}</p>
+                          <div class="mt-4">
+                              <a href="${project.demoLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white demoLink">Live Demo</a>
+                              <a href="${project.githubLink}" target="_blank" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 h-10 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 ml-2 githubLink">GitHub Repo</a>
+                          </div>
+                      </div>
+                  `;
           projectsGrid.appendChild(projectCard);
         });
       }
 
       // Call the function to create project cards when the page loads
       window.addEventListener("load", createProjectCards);
+    </script>
+
+    <script>
+      // Theme toggle script
+      // Theme toggle script
+      const themeToggleMobile = document.getElementById("themeToggleMobile");
+      const themeIconMobile = document.getElementById("themeIconMobile");
+      const themeToggleDesktop = document.getElementById("themeToggleDesktop");
+      const themeIconDesktop = document.getElementById("themeIconDesktop");
+
+      // Function to toggle dark mode and switch icons
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark"); // Toggle the dark class on the body
+
+        // Check if the body contains the 'dark' class and change the icon accordingly
+        const isDarkMode = document.body.classList.contains("dark");
+        if (themeIconMobile && themeIconDesktop) {
+          themeIconMobile.className = isDarkMode
+            ? "fas fa-sun text-white"
+            : "fas fa-moon"; // Mobile Icon
+          themeIconDesktop.className = isDarkMode
+            ? "fas fa-sun text-white"
+            : "fas fa-moon"; // Desktop Icon
+        }
+      }
+
+      // Attach event listeners to both mobile and desktop toggles
+      if (themeToggleMobile && themeToggleDesktop) {
+        themeToggleMobile.addEventListener("click", toggleDarkMode);
+        themeToggleDesktop.addEventListener("click", toggleDarkMode);
+      }
     </script>
   </body>
 </html>
