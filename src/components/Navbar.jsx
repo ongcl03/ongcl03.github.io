@@ -69,7 +69,11 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <a href="/resume/CL-Resume.pdf" download className="resume-btn">
+          <a
+            href="/CL-Resume.pdf"
+            download="CL-Resume.pdf"
+            className="resume-btn"
+          >
             <svg
               width="16"
               height="16"
