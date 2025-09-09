@@ -9,8 +9,7 @@ const Footer = () => {
           <h2 className="footer-title">Let's Connect</h2>
           <p className="footer-subtitle">
             I'm currently looking for new opportunities. Whether you have a
-            question or just want to say hi, I'll try my best to get back to
-            you!
+            question or just want to say hi, feel free to reach out!
           </p>
 
           <div className="social-links">
