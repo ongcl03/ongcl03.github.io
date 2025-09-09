@@ -3,15 +3,17 @@ import "./About.css";
 
 const About = () => {
   const skills = [
-    "JavaScript",
-    "React",
-    "Node.js",
     "Python",
+    "JavaScript",
     "Java",
+    "SpringBoot",
+    "React",
     "HTML/CSS",
-    "Git",
+    "Flutter",
+    "Dart",
     "SQL",
-    "MongoDB",
+    "C",
+    "Git",
     "REST APIs",
   ];
 
@@ -22,23 +24,18 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p className="about-description">
-              I'm a recent Computer Science graduate with a strong passion for
-              software development and problem-solving. My journey in tech began
-              with curiosity about how things work, and has evolved into a deep
-              commitment to creating impactful software solutions.
-            </p>
-            <p className="about-description">
-              During my studies, I've developed a solid foundation in
-              algorithms, data structures, and software engineering principles.
-              I'm particularly interested in full-stack development and enjoy
-              working with modern web technologies to build user-friendly
-              applications.
-            </p>
-            <p className="about-description">
-              I'm eager to contribute to innovative projects and continue
-              learning in a collaborative environment. My goal is to leverage
-              technology to solve real-world problems and make a positive
-              impact.
+              I am a passionate and detail-oriented Computer Science graduate
+              from Monash University, driven to build complete software
+              solutions from concept to deployment. My hands-on experience
+              includes creating a <strong>backend microservice</strong> using{" "}
+              <strong>Java and Spring Boot</strong>, as well as developing
+              interactive front-ends for <strong>AI applications</strong>.
+              Through my internship, I honed my skills in{" "}
+              <strong>database optimization</strong> and{" "}
+              <strong>full-stack feature delivery</strong>. I am driven to apply
+              my problem-solving abilities and full-stack perspective to create
+              meaningful, real-world solutions, fueled by a commitment to
+              continuous learning and a deep interest in the field of AI.
             </p>
           </div>
           <div className="skills-section">
