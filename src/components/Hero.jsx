@@ -8,8 +8,8 @@ const Hero = () => {
         <div className="hero-content">
           <div className="hero-text">
             <h1 className="hero-greeting">Hello, I'm</h1>
-            <h2 className="hero-name">Your Name</h2>
-            <h3 className="hero-title">Software Engineer</h3>
+            <h2 className="hero-name">Ong Chang Le</h2>
+            <h3 className="hero-title">CS Fresh Grad</h3>
             <p className="hero-description">
               Fresh Computer Science graduate passionate about creating elegant
               solutions to complex problems. Specialized in full-stack
@@ -35,8 +35,8 @@ const Hero = () => {
                 <pre>
                   <code>
                     {`const developer = {
-  name: "Your Name",
-  role: "Software Engineer",
+  name: "Ong Chang Le",
+  role: "CS Fresh Grad",
   skills: ["React", "Node.js", "Python"],
   passion: "Building the future",
   available: true
