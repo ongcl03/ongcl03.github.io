@@ -9,7 +9,7 @@ const Hero = () => {
           <div className="hero-text">
             <h1 className="hero-greeting">Hello, I'm</h1>
             <h2 className="hero-name">Ong Chang Le</h2>
-            <h3 className="hero-title">CS Fresh Grad</h3>
+            <h3 className="hero-title">CS Fresh Graduate</h3>
             <p className="hero-description">
               Fresh Computer Science graduate passionate about creating elegant
               solutions to complex problems. Specialized in full-stack
@@ -36,7 +36,7 @@ const Hero = () => {
                   <code>
                     {`const developer = {
   name: "Ong Chang Le",
-  role: "CS Fresh Grad",
+  role: "CS Fresh Graduate",
   skills: ["Python", "Java", "SQL", "Springboot"],
   passion: "Building the future",
   available: true
