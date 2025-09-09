@@ -5,37 +5,65 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "AI Rebar Counting App",
       description:
-        "A full-stack e-commerce application with user authentication, product management, and payment integration.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
-      github: "https://github.com/yourusername/project1",
-      live: "https://project1.netlify.app",
+        "An AI-powered application to automate rebar counting on construction sites using a custom-trained YOLOv8 model.",
+      technologies: ["Python", "PyTorch", "YOLOv8", "Hugging Face", "Gradio"],
+      github: "https://github.com/ongcl03/rebar-yolov8-model",
+      live: "https://huggingface.co/spaces/cl0504/rebar-yolov8-app",
     },
     {
       id: 2,
-      title: "Task Management System",
+      title: "URL Shortener Service",
       description:
-        "A collaborative task management tool with real-time updates, drag-and-drop functionality, and team features.",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
-      github: "https://github.com/yourusername/project2",
-      live: "https://project2.netlify.app",
+        "A production-ready backend microservice for shortening URLs, with versioned DB migrations via Flyway.",
+      technologies: ["Java", "Spring Boot", "MySQL", "Flyway", "Swagger"],
+      github: "https://github.com/ongcl03/url-shortener",
+      live: "https://github.com/ongcl03/url-shortener", // No demo link for backend service
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "AI Tools Directory",
       description:
-        "A responsive weather application with location-based forecasts, interactive maps, and data visualization.",
-      technologies: ["JavaScript", "OpenWeather API", "Chart.js", "CSS3"],
-      github: "https://github.com/yourusername/project3",
-      live: "https://project3.netlify.app",
+        "A curated and responsive directory of free AI tools, built with a modern tech stack and deployed on Vercel.",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "Vercel"],
+      github: "https://github.com/ongcl03/Ai-List-Site",
+      live: "https://free-aitools.vercel.app/",
+    },
+    {
+      id: 4,
+      title: "Music Streaming App",
+      description:
+        "A full-featured music streaming app built with Flutter, using Firebase for real-time playlist management.",
+      technologies: ["Flutter", "Dart", "Firebase", "Firestore"],
+      github:
+        "https://github.com/ongcl03/flutter_projects/tree/reverb_music_stream_app",
+      live: "https://github.com/ongcl03/flutter_projects/tree/reverb_music_stream_app", // No demo link
+    },
+    {
+      id: 5,
+      title: "Instagram Automation Bot",
+      description:
+        "A Python-based automation script for Instagram, leveraging Selenium for browser control and interaction.",
+      technologies: ["Python", "Selenium", "Web Scraping", "Web Automation"],
+      github: "https://github.com/ongcl03/InstaPy",
+      live: "https://github.com/ongcl03/InstaPy", // No demo link for a script
+    },
+    {
+      id: 6,
+      title: "Google Form Auto Filler",
+      description:
+        "A Python script that automates filling out Google Forms using Selenium for web browser control and data entry.",
+      technologies: ["Python", "Selenium", "Web Scraping", "Web Automation"],
+      github: "https://github.com/ongcl03/Google-Form-Auto-Filler",
+      live: "https://github.com/ongcl03/Google-Form-Auto-Filler", // No demo link for a script
     },
   ];
 
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
-        <h2 className="section-title">Featured Projects</h2>
+        <h2 className="section-title">Projects</h2>
         <div className="projects-grid">
           {projects.map((project) => (
             <div key={project.id} className="project-card">
