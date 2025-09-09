@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection("home")}>
-          <span className="logo-text">YourName</span>
+          <span className="logo-text">Ong Chang Le</span>
         </div>
 
         <div className={`nav-menu ${mobileMenuOpen ? "active" : ""}`}>
