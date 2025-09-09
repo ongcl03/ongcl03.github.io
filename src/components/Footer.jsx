@@ -14,7 +14,7 @@ const Footer = () => {
           </p>
 
           <div className="contact-info">
-            <a href="mailto:your.email@example.com" className="contact-item">
+            <a href="mailto:ongchangle03@gmail.com" className="contact-item">
               <svg
                 width="20"
                 height="20"
@@ -26,7 +26,7 @@ const Footer = () => {
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              your.email@example.com
+              ongchangle03@gmail.com
             </a>
             <a href="tel:+1234567890" className="contact-item">
               <svg
@@ -45,7 +45,7 @@ const Footer = () => {
 
           <div className="social-links">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/ongcl03"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -60,7 +60,7 @@ const Footer = () => {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/ong-chang-le-b85249136/"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"
@@ -93,7 +93,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">© 2024 Ong Chang Le. Built with React & ❤️</p>
+          <p className="copyright">© 2024 Ong Chang Le. Built with React</p>
         </div>
       </div>
     </footer>

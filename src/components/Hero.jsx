@@ -37,7 +37,7 @@ const Hero = () => {
                     {`const developer = {
   name: "Ong Chang Le",
   role: "CS Fresh Grad",
-  skills: ["React", "Node.js", "Python"],
+  skills: ["Python", "Java", "SQL", "Springboot"],
   passion: "Building the future",
   available: true
 };`}
